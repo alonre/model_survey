@@ -25,6 +25,14 @@ const APP = {
     this.data = window.APP_DATA;
     this.totalQuestions = this.data.length;
     this.cacheImages();
+
+    // Analytics: Survey Started
+    if (window.posthog) {
+      posthog.capture('survey_started', {
+        total_questions: this.totalQuestions
+      });
+    }
+
     this.renderScreen();
   },
 
@@ -94,6 +102,16 @@ const APP = {
       this.selections[model] = 1;
     }
 
+    // Analytics: Response Submitted
+    if (window.posthog) {
+      posthog.capture('response_submitted', {
+        question_index: this.currentIndex,
+        word: this.data[this.currentIndex].word,
+        selected_model: model
+      });
+    }
+
+
     this.currentIndex++;
 
     // Simple fade out effect could be added here, but direct render is faster
@@ -142,6 +160,13 @@ const APP = {
         row.querySelector('.bar-fill').style.width = `${percentage}%`;
       }, 100);
     });
+
+    // Analytics: Survey Completed
+    if (window.posthog) {
+      posthog.capture('survey_completed', {
+        results: this.selections
+      });
+    }
 
     summaryContainer.appendChild(statsContainer);
     container.appendChild(header);
