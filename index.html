@@ -30,6 +30,7 @@
         defaults: '2025-11-30',
         person_profiles: 'always' // or 'always' to create profiles for anonymous users as well
       });
+      window.posthog = posthog;
     } else {
       console.log("PostHog not initialized (missing key)");
       // Mock for local testing to avoid errors
