@@ -32,6 +32,8 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  min-height: 100vh;
+  /* justify-content: center; Removing this default to avoid clipping, using margin auto instead if needed, or specific media query */
   justify-content: center;
 }
 
@@ -219,6 +221,49 @@ strong {
 @media (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  
+  #app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+  
+  .stat-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .model-name {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .bar-container {
+    width: 100%;
+  }
+}
+
+/* Fix for vertical clipping on small screens */
+@media (max-height: 800px), (max-width: 768px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  #app {
+    justify-content: flex-start;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    height: auto;
   }
 }
