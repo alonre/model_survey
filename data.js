@@ -80,26 +80,6 @@ window.APP_DATA = [
     ]
   },
   {
-    "word": "Certificate",
-    "images": [
-      {
-        "model": "mistral",
-        "filename": "Certificate_mistral_0 Small.jpeg",
-        "prompt": "A thick-outlined, chunky shape Certificate with large open spaces for coloring, reminiscent of 1950s Israeli children's literature classics in minimalist children's coloring book line art style."
-      },
-      {
-        "model": "llama3.1:8b",
-        "filename": "Certificate_llama3.1_8b_0 Small.jpeg",
-        "prompt": "A simple certificate with thick black outlines and big empty spaces for coloring, like 1950s Israeli children's books, but super easy and plain like a preschool drawing on an all white background with no environment, just the one thing in the middle."
-      },
-      {
-        "model": "gpt-oss:20b",
-        "filename": "Certificate_gpt-oss_20b_0 Small.jpeg",
-        "prompt": "A simple, bold thick outline of a certificate, single centered object, thick black outlines, large white spaces, no shading, no textures, no gradients, no complex patterns, reminiscent of 1950s Israeli children's literature classics, simple chunky shapes, minimalist children's coloring book line art, absolute white background, no environment, no text, no letters."
-      }
-    ]
-  },
-  {
     "word": "Speaker/Woofer",
     "images": [
       {
@@ -200,7 +180,7 @@ window.APP_DATA = [
     ]
   },
   {
-    "word": "Sieve",
+    "word": "Strainer",
     "images": [
       {
         "model": "mistral",
